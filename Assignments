@@ -1,0 +1,135 @@
+<!DOCTYPE html> 
+<html> 
+      
+<head> 
+    <title> 
+        Get current date in JavaScript? 
+    </title> 
+</head> 
+  
+<body> 
+    <h1 style="color: green"> 
+        Simon Cubalevski 
+    </h1> 
+      
+    <b> 
+        Get current date in JavaScript? 
+    </b> 
+      
+    <p> 
+        Current Date is:  
+        <span class="output"></span> 
+    </p> 
+  
+    <button onclick="getCurrentDate()"> 
+        Get current Date 
+    </button> 
+      
+    <script type="text/javascript"> 
+        function getCurrentDate() { 
+            let date = new Date().toDateString(); 
+  
+            document.querySelector('.output').textContent 
+                    = date; 
+        } 
+    </script> 
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            label{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Area of Rectangle</h1>
+        <h2 id="area"></h2>
+        <label for="len">Length:
+            <input type="text" id="len">
+        </label>
+        <label for="wid">Width:
+            <input type="text" id="wid">
+        </label>
+        <button id="calcBtn">Calculate</button>
+        
+        <script>
+            //get inputs and button element from document
+            
+            var lenEl=document.querySelector("#len");
+            var widEl=document.querySelector("#wid");
+            
+            var calcBtn=document.querySelector("#calcBtn");
+            
+            var areagEl=document.querySelector("#area");
+            
+            //bind a function tothe onClick event the AddBtn
+            calcBtn.onclick=function(){
+                
+                //area formule length*width
+                area=Number(lenEl.value)*Number(widEl.value)
+
+                //write the results into #area #perimeter document 
+                areagEl.innerHTML="Area of rectange:"+area;
+            }
+            
+            
+        </script>
+
+
+    </body> 
+    
+    <p>
+        <b> 
+            Enter a number between 1-10 
+        </b> 
+    <input id="inputFiled" type=text />
+    <input type="button" onclick="check()" value="check" />
+    <p id="random"></p>
+    <div id="feedback"></div>
+</p>
+    
+    <script type="text/javascript"> 
+        function check() {
+        var x = Math.floor((Math.random() * 10) + 1);
+        var i = document.getElementById('inputFiled').value;
+        var feedback = document.getElementById('feedback');
+ 
+        if (i == x) {
+        feedback.innerHTML = 'Good Work';
+             } else {
+        feedback.innerHTML = 'Not matched';
+             }
+        } 
+    </script> 
+    </body>
+    <head>
+
+        </head> <body onload="animate_string('target')"
+
+        <p id="random"></p>
+        <div id="feedback"></div>
+        <input id="inputFiled" type=text />
+        <input type="button" onload="animate_string('target')" value="rotate" />
+        <pre id="target"> sssss </pre>
+
+        
+        
+        <script type="text/javascript"> 
+            function animate_string(id) {
+        var element = document.getElementById(id);
+        console.log(element);
+        var textNode = element.childNodes[0];
+        console.log(textNode);
+        var text = textNode.data;
+        console.log(text);
+
+        setInterval(function () {
+            text = text[text.length - 1] + text.substring(0, text.length - 1);
+            textNode.data = text;
+        }, 1000)
+    }
+        </script> 
+</html>                    
